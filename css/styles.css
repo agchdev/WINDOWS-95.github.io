@@ -93,11 +93,22 @@ body{
     padding: 3px;
 }
 /* VENTANA EMERGENTE */
-#ventana{
+/* #ventana{
     background-color: #C1C1C1;
     position: fixed;
     padding: .3rem;
     z-index: 1;
+}
+#ventana3{
+    background-color: #C1C1C1;
+    position: fixed;
+    padding: .3rem;
+    z-index: 1;
+} */
+.ventanaGeneral{
+    background-color: #C1C1C1;
+    position: fixed;
+    padding: .3rem;
 }
 .border{
     border: 2px solid #eee;
@@ -110,12 +121,12 @@ body{
     border-right-color: #eee;
     border-bottom-color: #eee;
 }
-#ventana2{
+/* #ventana2{
     background-color: #C1C1C1;
     position: fixed;
     padding: .3rem;
     z-index: 0;
-}
+} */
 .supven{
     display: flex;
     justify-content: space-between;
