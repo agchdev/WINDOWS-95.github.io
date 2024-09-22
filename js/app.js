@@ -6,21 +6,48 @@ const $$ = selector => document.querySelectorAll(selector);
 let moviendo1 = false;
 let moviendo2 = false;
 let ajuste = false;
+let activo = false;
 
 // ELEMENTS
-const $ventana1 = $('#ventana'); //La ventana general 1
-const $ventana2 = $('#ventana2'); //La ventana general 2
+const $ventana1 = $('#ventana'); //La ventana general PRODUCTO
+const $ventana2 = $('#ventana2'); //La ventana general CONÓCENOS
 const $main = $('#main');
 const $canva = $('#canva'); //Herramienta auxiliar para poder mover las ventanas con facilidad
 // La zona que deben seleccionar para poder mover las ventanas
 const $seleccionable1 = $('#seleccionable1'); 
 const $seleccionable2 = $('#seleccionable2');
 
+const $inicioFooter = $('#inicioFooter');
+const $productoFooter = $('#productoFooter');
+const $conocenosFooter = $('#conocenosFooter');
+const $contactoFooter = $('#contactoFooter');
+
+const $minCo = $('#minCo');
+const $fullCo = $('#fullCo');
+const $closeCo = $('#closeCo');
+
+const $minPro = $('#minPro');
+const $fullPro = $('#fullPro');
+const $closePro = $('#closePro');
+
 //EVENTS
 $seleccionable1.addEventListener('mousedown', activarVentana);
 $seleccionable2.addEventListener('mousedown', activarVentana2);
 $seleccionable1.addEventListener('mousedown', startMove1);
 $seleccionable2.addEventListener('mousedown', startMove2);
+
+$inicioFooter.addEventListener('click', mostrarInicio);
+$productoFooter.addEventListener('click', mostrarProducto);
+$conocenosFooter.addEventListener('click', mostrarConocenos);
+$contactoFooter.addEventListener('click', mostrarContacto);
+
+$minCo.addEventListener('click', cerrarConcocenos);
+$fullCo.addEventListener('click', fullConcocenos);
+$closeCo.addEventListener('click', cerrarConcocenos);
+
+$minPro.addEventListener('click', cerrarProductos);
+$fullPro.addEventListener('click', fullProductos);
+$closePro.addEventListener('click', cerrarProductos);
 
 //ajustes
 $ventana1.addEventListener('mousemove', moveAjuste);
@@ -53,13 +80,11 @@ function move(event){
         const { offsetX, offsetY } = event;
         $ventana1.style.top = offsetY+"px";
         $ventana1.style.left = -200+offsetX+"px";
-        console.log($ventana1.style.top);
     }
     if(moviendo2){
         const { offsetX, offsetY } = event;
         $ventana2.style.top = 10+offsetY+"px";
         $ventana2.style.left = -200+offsetX+"px";
-        console.log($ventana2.style.top);
     }
 }
 
@@ -83,4 +108,73 @@ function activarVentana2(){
     $ventana2.classList.add('activeVen');
     $ventana1.classList.remove('activeVen');
     $canva.classList.add('visible');
+}
+
+// FOOTER FUNCIONES
+
+function mostrarProducto(){
+    if($ventana1.style.display == "none"){
+        activo = false;
+    }
+    if(!activo){
+        $ventana1.style.display = "inline";
+        activo = true;
+        activarVentana();
+    }else{
+        $ventana1.style.display = "none";
+        activo = false;
+    }
+}
+
+function mostrarConocenos(){
+    if($ventana2.style.display == "none"){
+        activo = false;
+    }
+    if(!activo){
+        $ventana2.style.display = "inline";
+        activo = true;
+        activarVentana2();
+    }else{
+        $ventana2.style.display = "none";
+        activo = false;
+    }
+}
+
+function mostrarContacto(){
+    if($ventana1.style.display == "inline"){
+        activarVentana();
+        $canva.classList.remove('visible');
+        activo = true;
+    }
+    if(!activo){
+        $ventana1.style.display = "inline";
+        activo = true;
+        console.log("holaaaaa");
+    }else{
+        $ventana1.style.display = "none";
+        activo = false;
+    }
+}
+
+function mostrarInicio(){
+    $ventana1.style.display = "none";
+    $ventana2.style.display = "none";
+    console.log("hola");
+}
+
+function cerrarProductos(){
+    $ventana1.style.display = "none";
+    console.log("hola!");
+}
+
+function fullProductos(){
+
+}
+
+function cerrarConcocenos(){
+    $ventana2.style.display = "none";
+}
+
+function fullConcocenos(){
+
 }

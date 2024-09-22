@@ -23,6 +23,13 @@ time, mark, audio, video {
 p{
     pointer-events: none;
 }
+button {
+    /* Eliminamos los estilos predeterminados */
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer; /* Para que siga siendo un botón "clicable" */
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -87,6 +94,10 @@ body{
     text-decoration: none;
     color: white;
     padding: 4px;
+    margin-top: 2rem;
+}
+#appEscritorio a:nth-child(5) > img{
+    width: 70%;
 }
 #appEscritorio a:hover{
     border: 1px dashed white;
@@ -109,7 +120,9 @@ body{
     background-color: #C1C1C1;
     position: fixed;
     padding: .3rem;
+    display: none;
 }
+
 .border{
     border: 2px solid #eee;
     border-right-color: #000;
@@ -137,12 +150,14 @@ body{
 }
 .supven > div:nth-child(1){
     display: flex;
+    width: 90%;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    /* border: 1px solid red; */
 }
 .supven > div>img{
     max-width: 100%;
-    width: 19%;
+    width: 10%;
     /* border: 1px solid red; */
 }
 .supven > div>p{
@@ -197,7 +212,7 @@ body{
 }
 
 .activeVen > div:nth-child(1){
-    background-color: blue;
+    background-color: #0000ff;
     
 }
 .activeVen{
@@ -205,9 +220,11 @@ body{
     position: fixed;
 }
 
-.oac > a{
+.oac > button{
     color: white;
     text-decoration: none;
+    position: relative;
+    background-color: #C1C1C1;
 }
 
 /* FOOTER */

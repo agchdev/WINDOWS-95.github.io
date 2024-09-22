@@ -32,25 +32,30 @@
                         <img src="img/ico/directory_closed.ico" alt="carpeta cerrada">
                         <p>Perfil</p>
                     </a>
+
+                    <a href="#">
+                        <img src="img/ico/game_mine_1.ico" alt="buscaminas">
+                        <p>buscaminas</p>
+                    </a>
             </section>
             <!-- VENTANA -->
             <section id="ventana" class="activeVen border ventanaGeneral"> 
                 <!-- PARTE SUPERIOR VENTANA -->
-                <div id="seleccionable1" class="supven">
-                    <div>
+                <div class="supven">
+                    <div id="seleccionable1">
                         <img src="img/ico/directory_open_cool.ico" alt="">
                         <p>Producto</p>
                     </div>
                     <div class="oac"> <!-- O => Ocultar A => Agrandar C => Cerrar -->
-                        <a href="">
+                        <button id="minPro" href="">
                             <p>_</p>
-                        </a href="">
-                        <a href="">
+                        </button href="">
+                        <button id="fullPro" href="">
                             <p>[]</p>
-                        </a href="">
-                        <a href="">
+                        </button href="">
+                        <button id="closePro" href="">
                             <p>X</p>
-                        </a href="">
+                        </button href="">
                     </div>
                 </div>
                 <!-- CIERRE PARTE SUPERIOR VENTANA -->
@@ -78,23 +83,23 @@
             </section>
             <!-- CIERRE VENTANA -->
             <!-- VENTANA -->
-            <section id="ventana2" class="ventanaGeneral"> 
+            <section id="ventana2" class="ventanaGeneral border"> 
                 <!-- PARTE SUPERIOR VENTANA -->
-                <div id="seleccionable2" class="supven">
-                    <div>
+                <div class="supven">
+                    <div id="seleccionable2">
                         <img src="img/ico/directory_open_cool.ico" alt="">
-                        <p>Producto</p>
+                        <p>Conócenos</p>
                     </div>
                     <div class="oac">
-                        <a href="">
-                            <p>_</p>
-                        </a href="">
-                        <a href="">
+                        <button id="minCo" href="">
+                            <p id="minCo">_</p>
+                        </button href="">
+                        <button id="fullCo" href="">
                             <p>[]</p>
-                        </a href="">
-                        <a href="">
+                        </button href="">
+                        <button id="closeCo" href="">
                             <p>X</p>
-                        </a href="">
+                        </button href="">
                     </div>
                 </div>
                 <!-- CIERRE PARTE SUPERIOR VENTANA -->
@@ -107,7 +112,7 @@
                 </div>
                 <!-- CIERRE OPCIONES VENTANA -->
                 <!-- ZONA DE ESPACIO DE CONTENIDO -->
-                <div class="contVen">
+                <div class="contVen borderAct">
                     <!-- Añadir contenido de camiseta -->
                 </div>
                 <!-- CIERRE ZONA DE ESPACIO DE CONTENIDO -->
@@ -127,19 +132,19 @@
     <!-- BARRA DE HERRAMIENTAS -->
     <footer class="border">
         <div class="opc-footer">
-            <div class="border">
+            <div id="inicioFooter" class="border">
                 <img src="img/ico/windows.ico" alt="">
                 <p>Inicio</p>
             </div>
-            <div class="border">
+            <div id="productoFooter" class="border">
                 <img src="img/ico/directory_open_cool.ico" alt="">
                 <p>Producto</p>
             </div>
-            <div class="border">
+            <div id="conocenosFooter" class="border">
                 <img src="img/ico/directory_open_cool.ico" alt="">
                 <p>Conócenos</p>
             </div>
-            <div class="border">
+            <div id="contactoFooter" class="border">
                 <img src="img/ico/directory_open_cool.ico" alt="">
                 <p>Contacto</p>
             </div>
