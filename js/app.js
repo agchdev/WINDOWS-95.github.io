@@ -79,11 +79,7 @@ window.addEventListener('mouseup', stopMove1);
 window.addEventListener('mouseup', stopMove2);
 window.addEventListener('mouseup', stopMove3);
 
-function activarVentana(){
-    $ventana1.classList.add('activeVen');
-    $ventana2.classList.remove('activeVen');
-    $canva.classList.add('visible');
-}
+
 
 function startMove1(){
     moviendo1 = true;
@@ -132,6 +128,13 @@ function stopMove2(){
 function stopMove3(){
     moviendo3 = false;
     $canva.classList.remove('visible');
+}
+
+function activarVentana(){
+    $ventana1.classList.add('activeVen');
+    $ventana2.classList.remove('activeVen');
+    $ventana3.classList.remove('activeVen');
+    $canva.classList.add('visible');
 }
 
 function activarVentana2(){
