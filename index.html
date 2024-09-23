@@ -13,7 +13,7 @@
         </div>
             <section id="appEscritorio">
                 
-                    <a href="#">
+                    <a id="productoIcon" href="#">
                         <img src="img/ico/directory_closed.ico" alt="carpeta cerrada">
                         <p>Productos</p>
                     </a>
@@ -23,7 +23,7 @@
                         <p>Contacto</p>
                     </a>
                 
-                    <a href="#">
+                    <a id="conocenosIcon" href="#">
                         <img src="img/ico/directory_closed.ico" alt="carpeta cerrada">
                         <p>Conócenos</p>
                     </a>
@@ -33,7 +33,7 @@
                         <p>Perfil</p>
                     </a>
 
-                    <a href="#">
+                    <a id="buscaminasIcon" href="#">
                         <img src="img/ico/game_mine_1.ico" alt="buscaminas">
                         <p>buscaminas</p>
                     </a>
@@ -126,6 +126,63 @@
                 </div>
             </section>
             <!-- CIERRE VENTANA -->
+            <section id="ventana3" class="ventanaGeneral border"> 
+                <!-- PARTE SUPERIOR VENTANA -->
+                <div class="supven">
+                    <div id="seleccionable3">
+                        <img src="img/ico/game_mine_1.ico" alt="">
+                        <p>Buscaminas</p>
+                    </div>
+                    <div class="oac">
+                        <a href="">
+                            <p>_</p>
+                        </a href="">
+                        <a href="">
+                            <p>[]</p>
+                        </a href="">
+                        <a href="">
+                            <p>X</p>
+                        </a href="">
+                    </div>
+                </div>
+                <!-- CIERRE PARTE SUPERIOR VENTANA -->
+                <!-- PARTE OPCIONES VENTANA -->
+                <div class="opcVenBusca">
+                    <p>Game</p>
+                    <p>Help</p>
+                </div>
+                <!-- CIERRE OPCIONES VENTANA -->
+                <!-- ZONA DE ESPACIO DE CONTENIDO -->
+                <div class="contVen">
+                    <div id="tablero">
+                        <div></div> <div></div> <div></div> <div></div><div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div><div></div> <div></div> <div></div> <div></div>
+                      </div>
+                      <div id="estado"><div>Nº de minas restante: <span id="numMinasRestantes"></sapn></div></div>
+
+                </div>
+                <!-- CIERRE ZONA DE ESPACIO DE CONTENIDO -->
+                <div class="espVacVen">
+                    <div>
+                        <!-- Se puede mantener vacío -->
+                    </div>
+                    <div>
+                        <!-- Se puede mantener vacío -->
+                    </div>
+                </div>
+            </section>
         
     </main>
     <!-- CIERRE PANTALLA -->
@@ -158,5 +215,6 @@
     </footer>
     <!-- CIERRE BARRA DE HERRAMIENTAS -->
     <script src="js/app.js"></script>
+    <script src="js/buscaminas.js"></script>
 </body>
 </html>
