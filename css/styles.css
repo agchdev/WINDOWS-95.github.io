@@ -365,6 +365,7 @@ footer{
   /*  PAINT STYLES  */
   
 
+
 h1{
     color: #fce300;
     font-size: 12px;
@@ -386,7 +387,7 @@ canvas{
 }
 
 header{
-
+    grid-area: header;
     button{
         border: 0;
         background: transparent;
