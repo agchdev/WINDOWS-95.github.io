@@ -36,6 +36,10 @@ const $minPro = $('#minPro');
 const $fullPro = $('#fullPro');
 const $closePro = $('#closePro');
 
+const $minPa = $('#minPa');
+const $fullPa = $('#fullPa');
+const $closePa = $('#closePa');
+
 const $productoIcon = $('#productoIcon');
 const $conocenosIcon = $('#conocenosIcon');
 const $buscaminasIcon = $('#buscaminasIcon');
@@ -68,6 +72,10 @@ $closeCo.addEventListener('click', cerrarConcocenos);
 $minPro.addEventListener('click', cerrarProductos);
 $fullPro.addEventListener('click', fullProductos);
 $closePro.addEventListener('click', cerrarProductos);
+
+$minPa.addEventListener('click', cerrarPaint);
+$fullPa.addEventListener('click', fullPaint);
+$closePa.addEventListener('click', cerrarPaint);
 
 //ajustes
 $ventana1.addEventListener('mousemove', moveAjuste);
@@ -254,6 +262,15 @@ function cerrarProductos(){
 }
 
 function fullProductos(){
+
+}
+
+
+function cerrarPaint(){
+    $ventana4.style.display = "none";
+}
+
+function fullPaint(){
 
 }
 
