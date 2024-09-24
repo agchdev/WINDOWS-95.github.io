@@ -27,6 +27,8 @@ const $inicioFooter = $('#inicioFooter');
 const $productoFooter = $('#productoFooter');
 const $conocenosFooter = $('#conocenosFooter');
 const $contactoFooter = $('#contactoFooter');
+const $paintFooter = $('#paintFooter');
+const $buscaminasFooter = $('#buscaminasFooter');
 
 const $minCo = $('#minCo');
 const $fullCo = $('#fullCo');
@@ -39,6 +41,10 @@ const $closePro = $('#closePro');
 const $minPa = $('#minPa');
 const $fullPa = $('#fullPa');
 const $closePa = $('#closePa');
+
+const $minBus = $('#minBus');
+const $fullBus = $('#fullBus');
+const $closeBus = $('#closeBus');
 
 const $productoIcon = $('#productoIcon');
 const $conocenosIcon = $('#conocenosIcon');
@@ -59,6 +65,8 @@ $inicioFooter.addEventListener('click', mostrarInicio);
 $productoFooter.addEventListener('click', mostrarProducto);
 $conocenosFooter.addEventListener('click', mostrarConocenos);
 $contactoFooter.addEventListener('click', mostrarContacto);
+$paintFooter.addEventListener('click', mostrarPaint);
+$buscaminasFooter.addEventListener('click', mostrarBuscaminas);
 
 $productoIcon.addEventListener('click', mostrarContacto);
 $conocenosIcon.addEventListener('click', mostrarConocenos);
@@ -76,6 +84,10 @@ $closePro.addEventListener('click', cerrarProductos);
 $minPa.addEventListener('click', cerrarPaint);
 $fullPa.addEventListener('click', fullPaint);
 $closePa.addEventListener('click', cerrarPaint);
+
+$minBus.addEventListener('click', cerrarBuscaminas);
+$fullBus.addEventListener('click', fullBuscaminas);
+$closeBus.addEventListener('click', cerrarBuscaminas);
 
 //ajustes
 $ventana1.addEventListener('mousemove', moveAjuste);
@@ -253,6 +265,8 @@ function mostrarContacto(){
 function mostrarInicio(){
     $ventana1.style.display = "none";
     $ventana2.style.display = "none";
+    $ventana3.style.display = "none";
+    $ventana4.style.display = "none";
     console.log("hola");
 }
 
@@ -279,5 +293,13 @@ function cerrarConcocenos(){
 }
 
 function fullConcocenos(){
+
+}
+
+function cerrarBuscaminas(){
+    $ventana3.style.display = "none";
+}
+
+function fullBuscaminas(){
 
 }

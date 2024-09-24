@@ -411,7 +411,7 @@ header{
     display: grid;
     grid-template-areas: "header header header"
     "aside main main"
-    "footer footer footer";
+    "footerP footerP footerP";
 }
 
 aside{
@@ -466,4 +466,8 @@ aside{
 
 #picker-btn{
     background-image: url(../icons/picker.png);
+}
+
+#footerPaint{
+    grid-area: footerP;
 }
