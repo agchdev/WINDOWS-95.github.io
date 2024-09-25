@@ -241,7 +241,8 @@ body{
 /* FOOTER */
 footer{
     position: fixed;
-    top: 94vh;
+    /* top: 94vh; */
+    bottom: 0vh;
     display: flex;
     justify-content: space-between;
     /* border: 1px solid red; */
