@@ -160,6 +160,12 @@ function move(event){
         $ventana4.style.left = -200+offsetX+"px";
         console.log($ventana4.style.top);
     }
+    if(moviendo5){
+        const { offsetX, offsetY } = event;
+        $ventana5.style.top = offsetY+"px";
+        $ventana5.style.left = -200+offsetX+"px";
+        console.log($ventana5.style.top);
+    }
 }
 
 function moveAjuste(){
