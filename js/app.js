@@ -7,6 +7,7 @@ let moviendo1 = false;
 let moviendo2 = false;
 let moviendo3 = false;
 let moviendo4 = false;
+let moviendo5 = false;
 let ajuste = false;
 let activo = false;
 
@@ -15,6 +16,7 @@ const $ventana1 = $('#ventana'); //La ventana general PRODUCTO
 const $ventana2 = $('#ventana2'); //La ventana general CONÓCENOS
 const $ventana3 = $('#ventana3'); //La ventana general BUSCAMINAS
 const $ventana4 = $('#ventana4'); //La ventana general PAINT
+const $ventana5 = $('#ventana5'); //La ventana de CONTACTO
 const $main = $('#main');
 const $canva = $('#canva'); //Herramienta auxiliar para poder mover las ventanas con facilidad
 // La zona que deben seleccionar para poder mover las ventanas
@@ -22,6 +24,7 @@ const $seleccionable1 = $('#seleccionable1');
 const $seleccionable2 = $('#seleccionable2');
 const $seleccionable3 = $('#seleccionable3');
 const $seleccionable4 = $('#seleccionable4');
+const $seleccionable5 = $('#seleccionable5');
 
 const $inicioFooter = $('#inicioFooter');
 const $productoFooter = $('#productoFooter');
@@ -33,6 +36,10 @@ const $buscaminasFooter = $('#buscaminasFooter');
 const $minCo = $('#minCo');
 const $fullCo = $('#fullCo');
 const $closeCo = $('#closeCo');
+
+const $minCont = $('#minCont');
+const $fullCont = $('#fullCont');
+const $closeCont = $('#closeCont');
 
 const $minPro = $('#minPro');
 const $fullPro = $('#fullPro');
@@ -47,6 +54,7 @@ const $fullBus = $('#fullBus');
 const $closeBus = $('#closeBus');
 
 const $productoIcon = $('#productoIcon');
+const $contactoIcon = $('#contactoIcon')
 const $conocenosIcon = $('#conocenosIcon');
 const $buscaminasIcon = $('#buscaminasIcon');
 const $paintIcon = $('#paintIcon');
@@ -56,10 +64,12 @@ $seleccionable1.addEventListener('mousedown', activarVentana);
 $seleccionable2.addEventListener('mousedown', activarVentana2);
 $seleccionable3.addEventListener('mousedown', activarVentana3);
 $seleccionable4.addEventListener('mousedown', activarVentana4);
+$seleccionable5.addEventListener('mousedown', activarVentana5);
 $seleccionable1.addEventListener('mousedown', startMove1);
 $seleccionable2.addEventListener('mousedown', startMove2);
 $seleccionable3.addEventListener('mousedown', startMove3);
 $seleccionable4.addEventListener('mousedown', startMove4);
+$seleccionable5.addEventListener('mousedown', startMove5);
 
 $inicioFooter.addEventListener('click', mostrarInicio);
 $productoFooter.addEventListener('click', mostrarProducto);
@@ -68,7 +78,8 @@ $contactoFooter.addEventListener('click', mostrarContacto);
 $paintFooter.addEventListener('click', mostrarPaint);
 $buscaminasFooter.addEventListener('click', mostrarBuscaminas);
 
-$productoIcon.addEventListener('click', mostrarContacto);
+$productoIcon.addEventListener('click', mostrarProducto);
+$contactoIcon.addEventListener('click', mostrarContacto);
 $conocenosIcon.addEventListener('click', mostrarConocenos);
 $buscaminasIcon.addEventListener('click', mostrarBuscaminas);
 $paintIcon.addEventListener('click', mostrarPaint);
@@ -76,6 +87,10 @@ $paintIcon.addEventListener('click', mostrarPaint);
 $minCo.addEventListener('click', cerrarConcocenos);
 $fullCo.addEventListener('click', fullConcocenos);
 $closeCo.addEventListener('click', cerrarConcocenos);
+
+$minCont.addEventListener('click', cerrarContactos);
+$fullCont.addEventListener('click', fullContactos);
+$closeCont.addEventListener('click', cerrarContactos);
 
 $minPro.addEventListener('click', cerrarProductos);
 $fullPro.addEventListener('click', fullProductos);
@@ -94,11 +109,13 @@ $ventana1.addEventListener('mousemove', moveAjuste);
 $ventana2.addEventListener('mousemove', moveAjuste);
 $ventana3.addEventListener('mousemove', moveAjuste);
 $ventana4.addEventListener('mousemove', moveAjuste);
+$ventana5.addEventListener('mousemove', moveAjuste);
 
 $ventana1.addEventListener('mouseup', stopAjuste);
 $ventana2.addEventListener('mouseup', stopAjuste);
 $ventana3.addEventListener('mouseup', stopAjuste);
 $ventana4.addEventListener('mouseup', stopAjuste);
+$ventana5.addEventListener('mouseup', stopAjuste);
 
 window.addEventListener('mousemove', move);
 window.addEventListener('mousemove', move);
@@ -108,6 +125,7 @@ window.addEventListener('mouseup', stopMove1);
 window.addEventListener('mouseup', stopMove2);
 window.addEventListener('mouseup', stopMove3);
 window.addEventListener('mouseup', stopMove4);
+window.addEventListener('mouseup', stopMove5);
 
 
 
@@ -158,6 +176,10 @@ function startMove4(){
     moviendo4 = true;
     $canva.classList.add('visible');
 }
+function startMove5(){
+    moviendo5 = true;
+    $canva.classList.add('visible');
+}
 
 function stopAjuste(){
     ajuste = false;
@@ -174,12 +196,17 @@ function stopMove4(){
     moviendo4 = false;
     $canva.classList.remove('visible');
 }
+function stopMove5(){
+    moviendo5 = false;
+    $canva.classList.remove('visible');
+}
 
 function activarVentana(){
     $ventana1.classList.add('activeVen');
     $ventana2.classList.remove('activeVen');
     $ventana3.classList.remove('activeVen');
     $ventana4.classList.remove('activeVen');
+    $ventana5.classList.remove('activeVen');
     $canva.classList.add('visible');
 }
 
@@ -188,6 +215,7 @@ function activarVentana2(){
     $ventana1.classList.remove('activeVen');
     $ventana3.classList.remove('activeVen');
     $ventana4.classList.remove('activeVen');
+    $ventana5.classList.remove('activeVen');
     $canva.classList.add('visible');
 }
 
@@ -196,6 +224,7 @@ function activarVentana3(){
     $ventana1.classList.remove('activeVen');
     $ventana2.classList.remove('activeVen');
     $ventana4.classList.remove('activeVen');
+    $ventana5.classList.remove('activeVen');
     $canva.classList.add('visible');
 }
 
@@ -204,6 +233,16 @@ function activarVentana4(){
     $ventana1.classList.remove('activeVen');
     $ventana2.classList.remove('activeVen');
     $ventana3.classList.remove('activeVen');
+    $ventana5.classList.remove('activeVen');
+    $canva.classList.add('visible');
+}
+
+function activarVentana5(){
+    $ventana5.classList.add('activeVen');
+    $ventana1.classList.remove('activeVen');
+    $ventana2.classList.remove('activeVen');
+    $ventana3.classList.remove('activeVen');
+    $ventana4.classList.remove('activeVen');
     $canva.classList.add('visible');
 }
 
@@ -237,6 +276,20 @@ function mostrarConocenos(){
     }
 }
 
+function mostrarContacto(){
+    if($ventana5.style.display == "none"){
+        activo = false;
+    }
+    if(!activo){
+        $ventana5.style.display = "inline";
+        activo = true;
+        activarVentana2();
+    }else{
+        $ventana5.style.display = "none";
+        activo = false;
+    }
+}
+
 function mostrarBuscaminas(){
     $ventana3.style.display = "inline";
 }
@@ -246,7 +299,7 @@ function mostrarPaint(){
     $ventana4.style.display = "inline";
 }
 
-function mostrarContacto(){
+function mostrarProducto(){
     if($ventana1.style.display == "inline"){
         activarVentana();
         $canva.classList.remove('visible');
@@ -301,5 +354,13 @@ function cerrarBuscaminas(){
 }
 
 function fullBuscaminas(){
+
+}
+
+function cerrarContactos(){
+    $ventana5.style.display = "none";
+}
+
+function fullContactos(){
 
 }
