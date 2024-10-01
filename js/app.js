@@ -11,6 +11,12 @@ let moviendo5 = false;
 let ajuste = false;
 let activo = false;
 
+let fullProductosBtn = false;
+let fullBuscaminasBtn = false;
+let fullConocenosBtn = false;
+let fullContactoBtn = false;
+let fullPaintBtn = false;
+
 // ELEMENTS
 const $ventana1 = $('#ventana'); //La ventana general PRODUCTO
 const $ventana2 = $('#ventana2'); //La ventana general CONÓCENOS
@@ -20,6 +26,13 @@ const $ventana5 = $('#ventana5'); //La ventana de CONTACTO
 const $main = $('#main');
 const $canva = $('#canva'); //Herramienta auxiliar para poder mover las ventanas con facilidad
 // La zona que deben seleccionar para poder mover las ventanas
+
+const $ventana1supven = $('#ventana1supven');
+const $ventana2supven = $('#ventana2supven');
+const $ventana3supven = $('#ventana3supven');
+const $ventana4supven = $('#ventana4supven');
+const $ventana5supven = $('#ventana5supven');
+
 const $seleccionable1 = $('#seleccionable1'); 
 const $seleccionable2 = $('#seleccionable2');
 const $seleccionable3 = $('#seleccionable3');
@@ -335,7 +348,18 @@ function cerrarProductos(){
 }
 
 function fullProductos(){
-
+    if(!fullProductosBtn){
+        $ventana1.classList.remove('ventanaGeneral');
+        $ventana1.style.top = "0px";
+        $ventana1.style.left = "0px";
+        $ventana1.classList.add('fullScreen');
+        fullProductosBtn = true;
+    }else{
+        $ventana1.classList.remove('fullScreen');
+        $ventana1.classList.add('ventanaGeneral');
+        fullProductosBtn = false;
+    }
+    
 }
 
 
@@ -344,7 +368,18 @@ function cerrarPaint(){
 }
 
 function fullPaint(){
-
+    if(!fullProductosBtn){
+        $ventana4.classList.remove('ventanaGeneral');
+        $ventana4.style.top = "0px";
+        $ventana4.style.left = "0px";
+        $ventana4.classList.add('fullScreen');
+        fullProductosBtn = true;
+    }else{
+        $ventana4.classList.remove('fullScreen');
+        $ventana4.classList.add('ventanaGeneral');
+        fullProductosBtn = false;
+    }
+    
 }
 
 function cerrarConcocenos(){
@@ -352,7 +387,20 @@ function cerrarConcocenos(){
 }
 
 function fullConcocenos(){
-
+    if(!fullProductosBtn){
+        $ventana2.classList.remove('ventanaGeneral');
+        $ventana2.style.top = "0px";
+        $ventana2.style.left = "0px";
+        $ventana2.classList.add('fullScreen');
+        $ventana2supven.classList.add('width');
+        fullProductosBtn = true;
+    }else{
+        $ventana2.classList.remove('fullScreen');
+        $ventana2.classList.add('ventanaGeneral');
+        $ventana2supven.classList.remove('width');
+        fullProductosBtn = false;
+    }
+    
 }
 
 function cerrarBuscaminas(){
@@ -360,7 +408,18 @@ function cerrarBuscaminas(){
 }
 
 function fullBuscaminas(){
-
+    if(!fullProductosBtn){
+        $ventana3.classList.remove('ventanaGeneral');
+        $ventana3.style.top = "0px";
+        $ventana3.style.left = "0px";
+        $ventana3.classList.add('fullScreen');
+        fullProductosBtn = true;
+    }else{
+        $ventana3.classList.remove('fullScreen');
+        $ventana3.classList.add('ventanaGeneral');
+        fullProductosBtn = false;
+    }
+    
 }
 
 function cerrarContactos(){
@@ -368,5 +427,18 @@ function cerrarContactos(){
 }
 
 function fullContactos(){
-
+    if(!fullProductosBtn){
+        $ventana5.classList.remove('ventanaGeneral');
+        $ventana5.style.top = "0px";
+        $ventana5.style.left = "0px";
+        $ventana5.classList.add('fullScreen');
+        $ventana5supven.classList.add('width');
+        fullProductosBtn = true;
+    }else{
+        $ventana5.classList.remove('fullScreen');
+        $ventana5.classList.add('ventanaGeneral');
+        $ventana5supven.classList.remove('width');
+        fullProductosBtn = false;
+    }
+    
 }

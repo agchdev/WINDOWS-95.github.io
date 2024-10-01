@@ -254,7 +254,7 @@
             <!-- VENTANA -->
             <section id="ventana" class="activeVen border ventanaGeneral"> 
                 <!-- PARTE SUPERIOR VENTANA -->
-                <div class="supven">
+                <div id="ventana1supven" class="supven">
                     <div id="seleccionable1">
                         <img src="img/ico/directory_open_cool.ico" alt="">
                         <p>Producto</p>
@@ -298,21 +298,21 @@
              <!-- VENTANA -->
             <section id="ventana5" class="activeVen border ventanaGeneral"> 
                 <!-- PARTE SUPERIOR VENTANA -->
-                <div class="supven">
+                <div id="ventana5supven" class="supven">
                     <div id="seleccionable5">
                         <img src="img/ico/directory_open_cool.ico" alt="">
                         <p>Contacto</p>
                     </div>
                     <div class="oac"> <!-- O => Ocultar A => Agrandar C => Cerrar -->
-                        <button id="minCont" href="">
+                        <button id="minCont">
                             <p>_</p>
-                        </button href="">
-                        <button id="fullCont" href="">
+                        </button>
+                        <button id="fullCont">
                             <p>[]</p>
-                        </button href="">
-                        <button id="closeCont" href="">
+                        </button>
+                        <button id="closeCont">
                             <p>X</p>
-                        </button href="">
+                        </button>
                     </div>
                 </div>
                 <!-- CIERRE PARTE SUPERIOR VENTANA -->
@@ -326,7 +326,41 @@
                 <!-- CIERRE OPCIONES VENTANA -->
                 <!-- ZONA DE ESPACIO DE CONTENIDO -->
                 <div class="contVen borderAct">
-                    <!-- Añadir contenido de camiseta -->
+                    <div class="fullventanaContacto">
+                        <div class="ventanaScam ">
+                            <section class="scamDatos border">
+                                <div class="supvenScam border">
+                                    <p>scam datos</p>
+                                    <button id="closeScam" href="">
+                                        <p>X</p>
+                                    </button>
+                                </div>
+                                <div class="form">
+                                    <h3>CONTACTO</h3>
+                                    <form>
+                                        <input type="text" id="name" name="user_name" placeholder="nombre"/>
+                                        <input type="email" id="email" name="user_name" placeholder="email"/>
+                                        <textarea name="textarea" id="textarea"  placeholder="algo"></textarea>
+                                        <div>
+                                            <input type="checkbox" id="checkbox" name="user_name"/>
+                                            <p>i read & Agree to Terms and Conditions</p>
+                                        </div>
+                                        <button>Enviar</button>
+                                    </form>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Preguntas frecuentes</h2>
+                                <p>Cuanto cuestan?</p>
+                                <p>Como funcionan los envios?</p>
+                                <p>Hay un stock ilimitado?</p>
+                                <p>Manuel es español de España?</p>
+                            </section>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
                 </div>
                 <!-- CIERRE ZONA DE ESPACIO DE CONTENIDO -->
                 <div class="espVacVen">
@@ -342,7 +376,7 @@
             <!-- VENTANA -->
             <section id="ventana2" class="ventanaGeneral border"> 
                 <!-- PARTE SUPERIOR VENTANA -->
-                <div class="supven">
+                <div id="ventana2supven" class="supven">
                     <div id="seleccionable2">
                         <img src="img/ico/directory_open_cool.ico" alt="">
                         <p>Conócenos</p>
@@ -385,7 +419,7 @@
             <!-- CIERRE VENTANA -->
             <section id="ventana3" class="ventanaGeneral border"> 
                 <!-- PARTE SUPERIOR VENTANA -->
-                <div class="supven">
+                <div id="ventana3supven" class="supven">
                     <div id="seleccionable3">
                         <img src="img/ico/game_mine_1.ico" alt="">
                         <p>Buscaminas</p>
@@ -442,7 +476,7 @@
             </section>
             <section id="ventana4" class="ventanaGeneral border"> 
                 <!-- PARTE SUPERIOR VENTANA -->
-                <div class="supven">
+                <div id="ventana4supven" class="supven">
                     <div id="seleccionable4">
                         <img src="img/ico/paint_old.ico" alt="">
                         <p>Paint</p>
