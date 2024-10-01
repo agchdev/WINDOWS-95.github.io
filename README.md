@@ -19,12 +19,15 @@ Tecnologías
 
 👩‍💻 Este emulador utiliza las siguientes tecnologías: 👩‍💻
 
-📋 HTML5: estructura la interfaz de usuario y los elementos visuales.
+📋 **HTML5:** estructura la interfaz de usuario y los elementos visuales.
 
-🎨 CSS3: estiliza y emula la apariencia original de Windows 95.
+🎨 **CSS3:** estiliza y emula la apariencia original de Windows 95.
 
-🐉 JavaScript: gestiona la lógica y la interactividad del sistema operativo.
+🐉 **JavaScript:** gestiona la lógica y la interactividad del sistema operativo.
 
+
+>[!note]
+>Aún se haya en desarrollo
 <!---
 agchdev/agchdev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
