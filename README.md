@@ -1,6 +1,7 @@
 # 💻 **Windows 95 Web Emulator** 💻
 
 **Visítalo ya en:** [WINDOWS 95](https://agchdev.github.io/WINDOWS-95.github.io/)
+![IMAGEN](https://github.com/user-attachments/assets/f0fa5bb8-6fd4-44a3-9075-ab3d7289b171)
 
 ## ✏ Descripción ✏
 
