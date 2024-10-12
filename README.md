@@ -29,7 +29,7 @@ Tecnologías
 
 
 >[!note]
->Aún se haya en desarrollo
+>Aún se haya en desarrollo hasta próximo aviso
 <!---
 agchdev/agchdev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
